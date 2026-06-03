@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Texto {
+
+    public static void main(String[] args) {
+
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.println("Ingresa un texto:");
+        String texto = entrada.nextLine();
+
+        texto = texto.toLowerCase();
+
+        String[] palabras = texto.split(" ");
+
+        int contador = 0;
+
+        for (int i = 0; i < palabras.length; i++) {
+
+            if (palabras[i].equals("ingeniería")) {
+                contador++;
+            }
+        }
+
+        System.out.println("\nLa palabra 'ingeniería' aparece "
+                + contador + " veces.");
+
+        entrada.close();
+    }
+}
