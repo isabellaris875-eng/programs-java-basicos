@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class Circulo {
+
+    // Función para calcular el área
+    public static double calcularArea(double radio) {
+        return Math.PI * radio * radio;
+    }
+
+    // Función para calcular el perímetro
+    public static double calcularPerimetro(double radio) {
+        return 2 * Math.PI * radio;
+    }
+
+    public static void main(String[] args) {
+
+        Scanner entrada = new Scanner(System.in);
+
+        // Pedir radio
+        System.out.print("Ingresa el radio del círculo: ");
+        double radio = entrada.nextDouble();
+
+        // Llamar funciones
+        double area = calcularArea(radio);
+        double perimetro = calcularPerimetro(radio);
+
+        // Mostrar resultados
+        System.out.println("\nÁrea del círculo: " + area);
+        System.out.println("Perímetro del círculo: " + perimetro);
+
+        entrada.close();
+    }
+}
