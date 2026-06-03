@@ -1,0 +1,51 @@
+package ordenamientoburbuja;
+
+import java.util.Scanner;
+
+public class OrdenamientoBurbuja {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        // Pedir cantidad de números
+        System.out.print("¿Cuántos números deseas ingresar?: ");
+        int n = sc.nextInt();
+
+        // Crear arreglo
+        int[] numeros = new int[n];
+
+        // Pedir números
+        for (int i = 0; i < n; i++) {
+
+            System.out.print("Ingresa un número: ");
+            numeros[i] = sc.nextInt();
+        }
+
+        // Método burbuja
+        for (int i = 0; i < numeros.length - 1; i++) {
+
+            for (int j = 0; j < numeros.length - 1 - i; j++) {
+
+                if (numeros[j] > numeros[j + 1]) {
+
+                    int auxiliar = numeros[j];
+
+                    numeros[j] = numeros[j + 1];
+
+                    numeros[j + 1] = auxiliar;
+                }
+            }
+        }
+
+        // Mostrar arreglo ordenado
+        System.out.println("Arreglo ordenado:");
+
+        for (int i = 0; i < numeros.length; i++) {
+
+            System.out.print(numeros[i] + " ");
+        }
+
+        sc.close();
+    }
+}
