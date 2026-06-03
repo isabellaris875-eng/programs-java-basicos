@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class ComparacionCadenas {
+
+    public static void main(String[] args) {
+
+        Scanner entrada = new Scanner(System.in);
+
+        // Pedir cadenas
+        System.out.print("Ingresa la primera cadena: ");
+        String cadena1 = entrada.nextLine();
+
+        System.out.print("Ingresa la segunda cadena: ");
+        String cadena2 = entrada.nextLine();
+
+        // Comparar longitud
+        if (cadena1.length() == cadena2.length()) {
+            System.out.println("\nLas cadenas tienen la misma longitud.");
+        } else {
+            System.out.println("\nLas cadenas NO tienen la misma longitud.");
+        }
+
+        // Comparar contenido
+        if (cadena1.equals(cadena2)) {
+            System.out.println("El contenido de las cadenas es igual.");
+        } else {
+            System.out.println("El contenido de las cadenas es diferente.");
+        }
+
+        entrada.close();
+    }
+}
