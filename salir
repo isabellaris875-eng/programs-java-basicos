@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class ConvertirNombres {
+
+    public static void main(String[] args) {
+
+        Scanner entrada = new Scanner(System.in);
+
+        // Pedir nombre
+        System.out.print("Ingresa tu nombre completo en minúsculas: ");
+        String nombre = entrada.nextLine();
+
+        // Convertir a mayúsculas
+        String nombreMayusculas = nombre.toUpperCase();
+
+        // Mostrar resultado
+        System.out.println("\nNombre en mayúsculas:");
+        System.out.println(nombreMayusculas);
+
+        entrada.close();
+    }
+}
