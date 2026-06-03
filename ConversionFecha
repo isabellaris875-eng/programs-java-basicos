@@ -1,0 +1,28 @@
+import java.time.LocalDate;
+import java.util.Scanner;
+
+public class ConversionFecha {
+
+    public static void main(String[] args) {
+
+        Scanner entrada = new Scanner(System.in);
+
+        // Pedir fecha
+        System.out.print("Ingresa una fecha (YYYY-MM-DD): ");
+        String fechaTexto = entrada.nextLine();
+
+        // Convertir texto a fecha
+        LocalDate fecha = LocalDate.parse(fechaTexto);
+
+        // Calcular fechas
+        LocalDate unaSemanaDespues = fecha.plusWeeks(1);
+        LocalDate unMesAntes = fecha.minusMonths(1);
+
+        // Mostrar resultados
+        System.out.println("\nFecha ingresada: " + fecha);
+        System.out.println("Una semana después: " + unaSemanaDespues);
+        System.out.println("Un mes antes: " + unMesAntes);
+
+        entrada.close();
+    }
+}
